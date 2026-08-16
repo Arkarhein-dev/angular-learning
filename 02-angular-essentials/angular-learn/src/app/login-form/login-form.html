@@ -1,0 +1,16 @@
+<form (submit)="onSubmit($event)">
+  <div>
+    <label>Email:</label>
+    <input type="text" [formField]="loginDataForm.email" />
+  </div>
+  <div>
+    <label>Password</label>
+    <input type="password" [formField]="loginDataForm.password" />
+  </div>
+  <button typ="submit">Login</button>
+
+  <div>
+    <h3>Email : {{ loginDataForm.email().value() }}</h3>
+    <h3>Password Length : {{ loginDataForm.password().value().length }}</h3>
+  </div>
+</form>

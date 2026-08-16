@@ -1,0 +1,9 @@
+<section>
+  <h2>Product Lists</h2>
+  @for (product of products(); track product.id) {
+    <ul>
+      <li>{{ product.name }}</li>
+      <li>{{ product.price }}</li>
+    </ul>
+  }
+</section>

@@ -1,0 +1,29 @@
+<section>
+  <input type="text" placeholder="Search Housing" />
+  <button>Search</button>
+</section>
+<section>
+  <app-housing-location></app-housing-location>
+</section>
+
+<section>
+  <h2>Location : {{ location() }}</h2>
+  <h3>Housing Size : {{ size() }}</h3>
+  {{ showHomeInfo() }}
+  <button [disabled]="isValidHome()" (click)="clickButton()">Show Who you are</button>
+  @if (isAdmin()) {
+    <h2>You are admin.</h2>
+  } @else {
+    <h2>You are gay.</h2>
+  }
+
+  <ul>
+    @for (fruit of fruits; track $index) {
+      <li>{{ fruit }}</li>
+    }
+  </ul>
+</section>
+
+<app-product-list-component></app-product-list-component>
+
+<app-custom-list-component></app-custom-list-component>
