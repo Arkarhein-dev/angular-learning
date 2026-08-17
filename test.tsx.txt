@@ -1,0 +1,29 @@
+interface LoginData {
+	email: string;
+	password: string;
+	agreeToTerm: boolean;
+	
+}
+
+@Component({
+	selector: 'app-form',
+	templateUrl: 'signal-form.html',
+	styleUrl: 'signal-form.css',
+	imports: []
+})
+export class Form{
+	loginModel = signal<LoginData>({
+		email : '',
+		password: '',
+		agreeToTerm: false
+	});
+	
+	loginForm = form(this.loginModel);
+	
+	
+	onSubmit(e: Event) {
+		e.preventDefault();
+		const credential = this.loginModel;
+		console.log('Logged in with : ' + {{credential}});
+	}
+}

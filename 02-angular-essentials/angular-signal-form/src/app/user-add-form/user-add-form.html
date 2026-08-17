@@ -1,0 +1,33 @@
+<form (submit)="onSubmit($event)">
+  <label>
+    username:
+    <input type="text" [formField]="userForm.username" />
+  </label>
+  @if (formSubmited() && userForm.username().invalid()) {
+    @for (error of userForm.username().errors(); track $index) {
+      <span>{{ error.message }}</span>
+    }
+  }
+
+  <label>
+    age:
+    <input type="number" [formField]="userForm.age" />
+  </label>
+  @if (formSubmited() && userForm.age().invalid()) {
+    @for (error of userForm.age().errors(); track $index) {
+      <span> {{ error.message }} </span>
+    }
+  }
+
+  <button type="submit">Add User</button>
+
+  <div>
+    <h2 style="background-color: black; font-size: 20px; color: yellow">Active Users</h2>
+
+    @for (user of userService.userInfo(); track $index) {
+      <div>{{ user.name }} ({{ user.age }})</div>
+    } @empty {
+      <div>No User Record.</div>
+    }
+  </div>
+</form>

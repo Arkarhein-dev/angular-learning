@@ -1,0 +1,59 @@
+/* Container scroll engine to protect mobile layouts */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Master Table Design */
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(223, 213, 213);
+  color: #000000;
+  font-size: 15px;
+  text-align: left;
+}
+
+/* Header Column Block Styling */
+.custom-table th {
+  background-color: rgb(85, 45, 45); /* Darker tone for emphasis */
+  color: #ffeb3b; /* Vibrant contrast text colors */
+  font-weight: 600;
+  padding: 14px 16px;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+/* Individual Data Cell Grid lines */
+.custom-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  vertical-align: middle;
+  color: #000000;
+}
+
+
+/* Zebra Striping Row Pattern */
+.custom-table tbody tr:nth-of-type(even) {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Dynamic Interactive Hover Engine */
+.custom-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Center and pad empty state warnings */
+.empty-row-text {
+  text-align: center;
+  padding: 30px !important;
+  color: rgba(17, 5, 5, 0.6);
+  font-style: italic;
+}

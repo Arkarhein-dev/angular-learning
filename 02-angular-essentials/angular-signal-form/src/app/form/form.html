@@ -1,0 +1,62 @@
+<form (submit)="onsubmit($event)">
+  <label>
+    Email:
+    <input type="email" [formField]="loginForm.email" />
+  </label>
+  @if (loginForm.email().touched() && loginForm.email().invalid()) {
+    <ul class="error-list">
+      @for (error of loginForm.email().errors(); track $index) {
+        <li>{{ error.message }}</li>
+      }
+    </ul>
+  }
+
+  <label>
+    Password:
+    <input type="password" [formField]="loginForm.password" />
+  </label>
+
+  @if (loginForm.password().touched() && loginForm.password().invalid()) {
+    <ul class="error-list">
+      @for (error of loginForm.password().errors(); track $index) {
+        <li>{{ error.message }}</li>
+      }
+    </ul>
+  }
+
+  <label>
+    I have agreed to the term and policy of Moontoon :3
+    <input type="checkbox" [formField]="loginForm.agreeToTerm" />
+  </label>
+
+  <label>
+    <input type="radio" [formField]="loginForm.radio" value="Normal User" /> Normal User
+    <input type="radio" [formField]="loginForm.radio" value="Admin User" /> Admin User
+  </label>
+
+  // Static Options
+  <div class="drop down">
+    <select [formField]="loginForm.signalValue">
+      <option value="">Select Country</option>
+      <option value="mya">Myanmar</option>
+      <option value="thai">Thailand</option>
+    </select>
+  </div>
+
+  // Dynamic Options
+  <div class="drop-down">
+    <select [formField]="loginForm.signalValue">
+      <option>Select A Country</option>
+      @for (country of loginForm.signalArray; track $index) {
+        <option value="{{ country }}">{{ country }}</option>
+      }
+    </select>
+  </div>
+
+  <div>
+    <h2>Email : {{ loginForm.email().value() }}</h2>
+    <h3>Password length : {{ loginForm.password().value().length }}</h3>
+  </div>
+
+  <button type="submit">Login</button>
+</form>
