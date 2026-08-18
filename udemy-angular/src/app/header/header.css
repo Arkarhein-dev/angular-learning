@@ -1,0 +1,17 @@
+nav {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: aqua;
+  color: black;
+  border-radius: 20px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+li {
+  list-style: none;
+  font-size: 2rem;
+}

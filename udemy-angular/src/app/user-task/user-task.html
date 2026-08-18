@@ -1,0 +1,17 @@
+<section>
+  <header class="task-header">
+    <h2>{{ user?.name }}'s Tasks</h2>
+    <button class="add-task-btn">Add Tasks</button>
+  </header>
+  <main>
+    <ul>
+      @for (task of selectedUserTasks; track task.id) {
+        <li>
+          <app-task [task]="task"></app-task>
+        </li>
+      } @empty {
+        <h2>No Task found</h2>
+      }
+    </ul>
+  </main>
+</section>

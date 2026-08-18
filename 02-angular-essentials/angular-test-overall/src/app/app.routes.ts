@@ -1,16 +1,26 @@
-import { Routes } from '@angular/router';
-import { Home } from './routing-test/home/home';
 import { About } from './routing-test/about/about';
+import { Home } from './routing-test/home/home';
+import { Routes } from '@angular/router';
+import { NotFound } from './routing-test/not-found/not-found';
 
 export const routes: Routes = [
   {
     path: '',
-    title: 'Appl Home Page',
-    component: Home,
+    redirectTo: 'home',
+    pathMatch: 'full',
   },
   {
-    path: '/about',
-    title: 'App About page',
+    path: 'home',
+    component: Home,
+    title: 'Home Page',
+  },
+  {
+    path: 'about',
     component: About,
+    title: 'About Page',
+  },
+  {
+    path: '**',
+    component: NotFound,
   },
 ];

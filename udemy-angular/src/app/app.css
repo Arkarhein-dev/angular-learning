@@ -1,0 +1,25 @@
+.user-div {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  border: 1px solid black;
+}
+
+.user-showcase {
+  border-radius: 15px;
+  width: auto;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+}
+.output-img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border: 2px solid black;
+  margin-top: 20px;
+  border-radius: 20px;
+}

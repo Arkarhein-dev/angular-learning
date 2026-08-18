@@ -1,0 +1,24 @@
+<app-header></app-header>
+<main>
+  <!-- <app-user-profile [userData]="USER_PROFILES[0]" />
+  <app-user-profile [userData]="USER_PROFILES[1]" />
+  <app-user-profile [userData]="USER_PROFILES[2]" />
+  <app-user-profile [userData]="USER_PROFILES[3]" /> -->
+
+  <div class="user-div">
+    <div class="user-showcase">
+      <app-user-profile
+        *ngFor="let user of USER_PROFILES"
+        [userData]="user"
+        (selectedUser)="getUserData($event)"
+      ></app-user-profile>
+    </div>
+    <div class="data-output">
+      @if (activeUser) {
+        <app-user-task [user]="activeUser"></app-user-task>
+      } @else {
+        <h2>Select a user to see their info</h2>
+      }
+    </div>
+  </div>
+</main>

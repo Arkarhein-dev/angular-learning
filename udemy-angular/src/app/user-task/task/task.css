@@ -1,0 +1,14 @@
+button{
+    background-color: rgb(43, 43, 157);
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+}
+article{
+    background-color: antiquewhite;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
