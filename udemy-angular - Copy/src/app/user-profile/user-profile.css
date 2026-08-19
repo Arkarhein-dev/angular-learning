@@ -1,0 +1,35 @@
+
+.user-profile-div {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  flex-direction: column;
+}
+.user-profile-btn {
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(227, 102, 13);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  cursor: pointer;
+  color: white;
+}
+img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-data-show {
+  border: 2px solid black;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+  min-height: 500px;
+  background-color: beige;
+}

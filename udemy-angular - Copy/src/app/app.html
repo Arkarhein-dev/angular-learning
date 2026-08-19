@@ -1,0 +1,15 @@
+<app-header />
+
+<main>
+  <div class="home-page-show">
+    @for (userProfile of userProfileArray; track userProfile.id) {
+      <app-user-profile [userProfile]="userProfile" (selectedUser)="onSelectUser($event)" />
+    }
+  </div>
+
+  <div class="user-data-side">
+    @if (selectedUser) {
+      <app-tasks [selectedUser]="selectedUser" />
+    }
+  </div>
+</main>

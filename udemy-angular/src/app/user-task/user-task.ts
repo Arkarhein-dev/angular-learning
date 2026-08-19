@@ -11,5 +11,7 @@ import { Task } from './task/task';
 })
 export class UserTask {
   @Input({ required: true }) user?: DammyUser;
-  selectedUserTasks = this?.user?.tasks;
+  get selectedUserTasks() {
+    return this?.user?.tasks;
+  }
 }

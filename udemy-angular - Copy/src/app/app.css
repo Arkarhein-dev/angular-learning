@@ -1,0 +1,16 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  margin: 20px;
+  padding: 10px;
+}
+.user-data-side {
+  background-color: rgb(241, 234, 234);
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.selected-user {
+  color: white;
+}
