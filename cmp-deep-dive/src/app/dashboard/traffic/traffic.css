@@ -1,0 +1,43 @@
+article {
+  background-color: #1e293b;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #f8fafc;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+header h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 18px;
+}
+
+div p {
+  margin: 12px 0;
+  font-size: 15px;
+}
+
+.badge {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: bold;
+  background-color: #0f172a;
+}
+
+.normal { color: #4ade80; }
+.high { color: #fbbf24; }
+.critical { color: #f87171; }

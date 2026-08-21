@@ -1,0 +1,29 @@
+span {
+  margin-left: 4px;
+}
+
+:host[appButton] {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #2563eb;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+:host[appButton]:hover {
+  background-color: #1d4ed8;
+}
+
+:host[appButton]:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+:host[appButton]:active {
+  background-color: #1e40af;
+}

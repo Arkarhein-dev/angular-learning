@@ -1,0 +1,7 @@
+.dashboard-item {
+  color: white;
+  background-color: rgb(195, 0, 255);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}

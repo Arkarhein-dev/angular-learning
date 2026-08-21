@@ -1,16 +1,24 @@
 <header>
   <ul>
     <li>
-      <a href="">Home</a>
+      <a routerLink="/home" routerLinkActive="active">Home</a>
     </li>
     <li>
-      <a href="">About</a>
+      <a routerLink="/about" routerLinkActive="active">About</a>
     </li>
     <li>
-      <a href="">Projects</a>
+      <a routerLink="projects" routerLinkActive="active">Projects</a>
     </li>
     <li>
-      <a href="">Contact Us</a>
+      <a routerLink="contact" routerLinkActive="active">Contact Us</a>
+    </li>
+    <li>
+      <a routerLink="setting" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+        >Setting</a
+      >
+    </li>
+    <li>
+      <a routerLink="setting/profile" routerLinkActive="active">Profile</a>
     </li>
   </ul>
 </header>

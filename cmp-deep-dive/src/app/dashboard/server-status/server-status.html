@@ -1,0 +1,12 @@
+<div>
+  @if (serverStatus() === 'online') {
+    <p>Servers are Online</p>
+    <p>All System are Operational</p>
+  } @else if (serverStatus() === 'offline') {
+    <p>Servers are offline</p>
+    <p>Functional should be restored soon.</p>
+  } @else {
+    <p>Unknown Server Status</p>
+    <p>Fetching server status is failed.</p>
+  }
+</div>

@@ -1,0 +1,36 @@
+article {
+  background-color: #1e293b;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #f8fafc;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+header h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 18px;
+}
+
+div p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+div p:first-child {
+  font-weight: bold;
+  font-size: 16px;
+}

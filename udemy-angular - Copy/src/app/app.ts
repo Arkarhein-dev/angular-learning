@@ -4,11 +4,12 @@ import { UserProfile } from './user-profile/user-profile';
 import { UserProfileData } from './user-profile/user.model';
 import { Tasks } from './tasks/tasks';
 import { UserProfileService } from './user-profile/user-profile-service';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Header, UserProfile, Tasks],
+  imports: [Header, UserProfile, Tasks, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

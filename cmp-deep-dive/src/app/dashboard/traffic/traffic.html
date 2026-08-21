@@ -1,0 +1,12 @@
+<div>
+  <p>
+    Live Requests: <strong>{{ requestsPerSecond }} req/s</strong>
+  </p>
+  <p>
+    Bandwidth: <strong>{{ bandwidthUsage }}</strong>
+  </p>
+  <p>
+    Load Status:
+    <span [class]="'badge ' + trafficLoad">&#128994; {{ trafficLoad }}</span>
+  </p>
+</div>
