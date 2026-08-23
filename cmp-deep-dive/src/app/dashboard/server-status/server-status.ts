@@ -1,4 +1,4 @@
-import { Component, DestroyRef, inject, OnDestroy, OnInit, signal } from '@angular/core';
+import { Component, DestroyRef, effect, inject, OnDestroy, OnInit, signal } from '@angular/core';
 
 @Component({
   imports: [],
@@ -9,9 +9,12 @@ import { Component, DestroyRef, inject, OnDestroy, OnInit, signal } from '@angul
 export class ServerStatus implements OnInit {
   serverStatus = signal<'online' | 'offline' | 'unknown'>('online');
   private destroyRef = inject(DestroyRef);
-  // interval?: ReturnType<typeof setInterval>;
 
-  constructor() {}
+  constructor() {
+    effect(() => {
+      console.log(this.serverStatus());
+    });
+  }
 
   ngOnInit(): void {
     const interval = setInterval(() => {
@@ -23,11 +26,9 @@ export class ServerStatus implements OnInit {
       } else {
         this.serverStatus.set('unknown');
       }
-      console.log('server status :' + this.serverStatus);
     }, 3000);
     this.destroyRef.onDestroy(() => {
       clearInterval(interval);
     });
   }
-
 }

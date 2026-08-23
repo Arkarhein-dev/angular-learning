@@ -1,13 +1,9 @@
 <div class="ticket-list">
-  @for (ticket of tickets; track ticket.id) {
-    <div class="ticket-item">
-      <span class="ticket-id">{{ ticket.id }}</span>
-      <span class="ticket-title">{{ ticket.title }}</span>
-      <span class="ticket-status" [class.resolved]="ticket.status === 'resolved'">
-        {{ ticket.status === 'open' ? '&#128308;' : '&#9989;' }}
-      </span>
-    </div>
-  }
+  <ul>
+    @for (ticket of tickets; track ticket.id) {
+      <app-ticket /> - {{ $count }} - {{ $first }} - {{ $last }}
+    }
+  </ul>
 
-  <app-new-ticket />
+  <app-new-ticket (add)="onAddTicket($event)" />
 </div>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { TicketModel } from '../ticket-model';
 
 @Component({
   imports: [],
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './ticket.css',
   templateUrl: './ticket.html',
 })
-export class Ticket {}
+export class Ticket {
+  // @Input({ required: true }) tickets!: TicketModel[];
+}
