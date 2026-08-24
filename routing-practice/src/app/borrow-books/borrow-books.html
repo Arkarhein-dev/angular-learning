@@ -1,0 +1,8 @@
+<div>
+  <h2>Borrow Books</h2>
+  <ul>
+    @for (book of borrowBooks; track book.id) {
+      <app-book [book]="book" />
+    }
+  </ul>
+</div>

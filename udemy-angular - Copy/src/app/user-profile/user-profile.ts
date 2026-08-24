@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { UserProfileData } from './user.model';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-user-profile',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './user-profile.html',
   styleUrl: './user-profile.css',
 })

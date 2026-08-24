@@ -1,3 +1,48 @@
 <h2>Hover over these items to see the directive in action:</h2>
 <p appHighlight>Hover me for yellow color</p>
 <p appHighlight2>Hove me for red color</p>
+
+<button appHover>Hover it to add bg color</button>
+
+<button ngNonBindable appHover2="blue" defaultColor="red">Hover me 2 {{ 1 + 1 }}</button>
+
+<hr />
+<p *appDelay="2000">This element is added to the dom after 2s.</p>
+
+<div class="counter-div">
+  <label for="counter-value"> Counter value : {{ counterService.count() }} </label>
+  <label for="counter-value"> Double Counter value : {{ counterService.doubleCount() }} </label>
+  <div class="counter-btn">
+    <button (click)="counterService.decreaseCount()">Decrease</button>
+    <button (click)="counterService.resetCount()">Reset</button>
+    <button (click)="counterService.increaseCount()">Increase</button>
+  </div>
+</div>
+
+<div class="products">
+  @for (item of items; track item.id) {
+    <div class="product">
+      <p>{{ item.productName }}</p>
+      <p>Quantity: {{ getCartQuantity(item.id) }}</p>
+      <button [disabled]="getCartQuantity(item.id) === 0" (click)="cartService.addTocart(item)">
+        {{ getCartQuantity(item.id) === 0 ? 'Out of Stock' : 'Add To Cart' }}
+      </button>
+    </div>
+  }
+</div>
+
+<div class="cart">
+  <ul>
+    @for (cartItem of cartService.cart(); track cartItem.id) {
+      <div class="cart-item">
+        <li>{{ cartItem.productName }}</li>
+        <li>{{ cartItem.quantity }}</li>
+        <button (click)="cartService.removeFromCart(cartItem.id)">Remove From Cart</button>
+      </div>
+    } @empty {
+      <p>No item in cart</p>
+    }
+  </ul>
+
+  <button class="reset-btn" (click)="cartService.resetCart()">Clear Cart</button>
+</div>

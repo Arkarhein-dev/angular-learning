@@ -1,0 +1,19 @@
+/* Grid container for each book row */
+.book {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr; /* Adjusted for ID and long book names */
+  gap: 16px;
+  align-items: center;
+  padding: 12px 8px;
+  border-bottom: 1px solid #b95858;
+  width: 100%;
+}
+
+/* Optional header styling if you want to add a header row later */
+li {
+  font-size: 14px;
+  color: #333;
+}
+button {
+  cursor: pointer;
+}
