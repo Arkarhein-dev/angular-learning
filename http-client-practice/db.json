@@ -1,0 +1,47 @@
+{
+  "books": [
+    {
+      "id": "2",
+      "title": "The Pragmatic Programmer",
+      "author": "Andrew Hunt",
+      "isbn": "978-0201616224",
+      "category": "Technology"
+    },
+    {
+      "title": "safdas",
+      "author": "asfdas",
+      "isbn": "asfdas",
+      "category": "asdfa",
+      "id": "RnreO-1gto4"
+    },
+    {
+      "title": "asfdas",
+      "author": "safdas",
+      "isbn": "asfda",
+      "category": "afsdsa",
+      "id": "_NB325wTBK8"
+    },
+    {
+      "title": "good boys",
+      "author": "arkar",
+      "isbn": "sfas-2322323",
+      "category": "book",
+      "id": "XOpmikobcZw"
+    },
+    {
+      "title": "453433",
+      "author": "34534",
+      "isbn": "34534",
+      "category": "34534",
+      "id": "YMqq7Gt3tF8"
+    },
+    {
+      "title": "How to bla bla",
+      "author": "Arkar",
+      "isbn": "asfdas",
+      "category": "safdas",
+      "id": "1uEAjXYwYzk"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,0 +1,78 @@
+.table-container {
+  overflow-x: auto;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.add-book-btn {
+  background-color: rgb(255, 255, 4);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 20px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  text-decoration: none;
+}
+
+/* Modern Table Styling */
+.library-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  text-align: left;
+  background-color: #ffffff;
+}
+
+.library-table thead {
+  background-color: #f3f4f6;
+  color: #374151;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.library-table th,
+.library-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.library-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+/* Empty State Styling */
+.empty-state {
+  text-align: center;
+  color: #6b7280;
+  padding: 2rem !important;
+  font-style: italic;
+}
+
+/* Button Styling */
+.delete-btn {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
+}
+
+.delete-btn:focus {
+  outline: 2px solid #fecaca;
+  outline-offset: 2px;
+}

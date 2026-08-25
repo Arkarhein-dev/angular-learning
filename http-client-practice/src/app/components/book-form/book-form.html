@@ -1,0 +1,51 @@
+<div class="form-card">
+  <h3>{{ id() ? 'Edit Book' : 'Add New Book' }}</h3>
+
+  <form [formGroup]="bookForm" (ngSubmit)="onSubmit()" class="book-form">
+    <div class="form-field">
+      <label for="title">Title</label>
+      <input id="title" type="text" formControlName="title" placeholder="Enter book title" />
+      @if (bookForm.get('title')?.touched && bookForm.get('title')?.invalid) {
+        <small class="error-msg">Title is required</small>
+      }
+    </div>
+
+    <div class="form-field">
+      <label for="author">Author</label>
+      <input id="author" type="text" formControlName="author" placeholder="Enter author name" />
+      @if (bookForm.get('author')?.touched && bookForm.get('author')?.invalid) {
+        <small class="error-msg">Author is required</small>
+      }
+    </div>
+
+    <div class="form-field">
+      <label for="isbn">ISBN</label>
+      <input id="isbn" type="text" formControlName="isbn" placeholder="e.g., 978-3-16-148410-0" />
+      @if (bookForm.get('isbn')?.touched && bookForm.get('isbn')?.invalid) {
+        <small class="error-msg">ISBN is required</small>
+      }
+    </div>
+
+    <div class="form-field">
+      <label for="category">Category</label>
+      <input
+        id="category"
+        type="text"
+        formControlName="category"
+        placeholder="Enter genre or category"
+      />
+      @if (bookForm.get('category')?.touched && bookForm.get('category')?.invalid) {
+        <small class="error-msg">Category is required</small>
+      }
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="submit-btn" [disabled]="bookForm.invalid">
+        {{ id() ? 'Update Book' : 'Add New Book' }}
+      </button>
+      @if (id()) {
+        <button type="button" class="cancel-btn" (click)="onCancel()">Cancel Edit</button>
+      }
+    </div>
+  </form>
+</div>

@@ -1,0 +1,16 @@
+<h2>Pipe Testing</h2>
+
+<p>Name : {{ productName | titlecase | uppercase }}</p>
+<p>Currency : {{ amount | currency }}</p>
+<p>Purchased Date : {{ purchaseOn | date: 'hh:mm' : 'UTC' | uppercase }}</p>
+
+<p>{{ firstName + ' ' + lastName | uppercase }}</p>
+
+<p>{{ firstName + ' ' + lastName | kebabcase }}</p>
+
+<p>{{ (isAdmin ? 'Access Granted' : 'Access Denied') | uppercase }}</p>
+
+<p>{{ lastName | customPipe: 'lowerCase' }}</p>
+<p>{{ lastName | customPipe: 'upperCase' }}</p>
+
+<p>{{ fruites | joinnamespipe }}</p>
