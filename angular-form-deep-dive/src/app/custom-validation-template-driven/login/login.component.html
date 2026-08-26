@@ -25,8 +25,30 @@
         #passwordInput="ngModel"
         required
         minlength="6"
+        appPasswordStrengthValidation
       />
     </div>
+
+    @if (emailInput.invalid && emailInput.dirty && emailInput.touched) {
+      @if (emailInput.errors?.['required']) {
+        <p>Email is required</p>
+      }
+      @if (emailInput.errors?.['email']) {
+        <p>Invalid Email Address</p>
+      }
+    }
+
+    @if (passwordInput.touched && passwordInput.dirty && passwordInput.invalid) {
+      @if (passwordInput.errors?.['required']) {
+        <p>Password is required</p>
+      }
+      @if (passwordInput.errors?.['minlength']) {
+        <p>Password must be at least 6 characters</p>
+      }
+      @if (passwordInput.errors?.['passwordStrengthValidation']) {
+        <p>Password must contain at least one UpperCase letter and one number</p>
+      }
+    }
 
     <button class="button">Login</button>
   </div>

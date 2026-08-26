@@ -13,7 +13,7 @@ function PasswordStrength(control: AbstractControl) {
   const hasUpperCase = /[A-Z]/.test(control.value);
   const hasNumber = /[0-9]/.test(control.value);
   const valid = hasUpperCase && hasNumber;
-  return valid ? null : { passwordlength: true };
+  return valid ? null : { passwordLength: true };
 }
 
 @Component({

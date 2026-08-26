@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { LoginComponent } from './custom-validation-template-driven/login/login.component';
+import { LoginComponent } from './reactive-form-2/login/login.component';
+import { SignupComponent } from './my-register-form/signup/signup.component';
 // import { LoginComponent } from './custom-validation-template-driven/login/login.component';
 
 // import { Login } from './custom-validation-template-driven/login/login';
@@ -10,6 +11,6 @@ import { LoginComponent } from './custom-validation-template-driven/login/login.
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
-  imports: [LoginComponent],
+  imports: [SignupComponent],
 })
 export class AppComponent {}
