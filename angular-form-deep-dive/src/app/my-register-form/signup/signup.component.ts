@@ -1,7 +1,5 @@
-import { NgFor } from '@angular/common';
-import { Component, DestroyRef, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import {
-  AbstractControl,
   FormArray,
   FormControl,
   FormGroup,
@@ -24,8 +22,10 @@ export class SignupComponent {
       password: new FormControl('', [Validators.required]),
       confirmPassword: new FormControl('', Validators.required),
     }),
-    firstName: new FormControl('', [Validators.required]),
-    lastName: new FormControl('', [Validators.required]),
+    username: new FormGroup({
+      firstName: new FormControl('', [Validators.required]),
+      lastName: new FormControl('', [Validators.required]),
+    }),
     address: new FormGroup({
       street: new FormControl('', [Validators.required]),
       number: new FormControl('', [Validators.required]),
@@ -36,10 +36,10 @@ export class SignupComponent {
       Validators.required,
     ]),
     source: new FormArray([new FormControl(false), new FormControl(false), new FormControl(false)]),
-    agree: new FormControl('', [Validators.requiredTrue]),
+    agree: new FormControl(false, [Validators.requiredTrue]),
   });
 
   onSubmit() {
-    console.log(this.form);
+    console.log(this.form.value);
   }
 }
