@@ -1,0 +1,29 @@
+<form [formGroup]="taskForm" (ngSubmit)="addNewTask()" class="task-form">
+  <h2 class="form-title">Create New Task</h2>
+
+  <div class="form-group">
+    <label for="title" class="form-label">Task Title</label>
+    <input
+      id="title"
+      type="text"
+      formControlName="title"
+      placeholder="e.g., Buy groceries"
+      class="form-control"
+    >
+  </div>
+
+  <div class="form-group">
+    <label for="description" class="form-label">Description</label>
+    <textarea
+      id="description"
+      formControlName="description"
+      placeholder="Add more details about this task..."
+      rows="3"
+      class="form-control"
+    ></textarea>
+  </div>
+
+  <button type="submit" [disabled]="taskForm.invalid" class="btn-submit">
+    Add Task
+  </button>
+</form>

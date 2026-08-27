@@ -1,0 +1,57 @@
+/* Dashboard Container Header Layout */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+  margin: 2rem auto 1rem auto;
+  padding: 0 0.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+header p {
+  margin: 0;
+}
+
+/* Dropdown Filter Styling */
+header select {
+  padding: 0.5rem 2rem 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #475569;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+header select:hover {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+header select:focus {
+  border-color: #4f46e5;
+  background-color: #ffffff;
+}
+
+/* Unordered Task Feed Structure */
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+li {
+  margin-bottom: 1rem;
+}

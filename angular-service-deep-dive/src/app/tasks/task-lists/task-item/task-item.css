@@ -1,0 +1,112 @@
+article {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+article:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  gap: 1rem;
+}
+
+header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  word-break: break-word;
+}
+
+/* Status Badge Container Style */
+header p {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+/* Dynamic styling matching your exact uppercase values */
+header p:has(text:contains("OPEN")),
+header p:has(iframe) /* Fallback helper if needed, or target content directly via bindings */
+{
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+/* Description Text */
+article > p {
+  margin: 0 0 1.25rem 0;
+  font-size: 0.925rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* Inline Action Form Layout */
+form {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 1.25rem;
+  margin: 0;
+}
+
+select {
+  flex-grow: 1;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #334155;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+select:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+form p {
+  margin: 0;
+}
+
+button {
+  background-color: #4f46e5;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #4338ca;
+}
+
+button:active {
+  background-color: #3730a3;
+}

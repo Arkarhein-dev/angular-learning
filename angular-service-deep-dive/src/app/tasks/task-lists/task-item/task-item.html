@@ -1,0 +1,22 @@
+<article>
+  <header>
+    <h3> {{ task().title }} </h3>
+    <p
+      [style.background-color]="task().status === 'DONE' ? '#dcfce7' : task().status === 'IN_PROGRESS' ? '#fef3c7' : '#e0f2fe'"
+      [style.color]="task().status === 'DONE' ? '#15803d' : task().status === 'IN_PROGRESS' ? '#b45309' : '#0369a1'">
+      {{ task().status }}
+    </p>
+  </header>
+  <p> {{ task().description }} </p>
+
+  <form [formGroup]="statusForm" (ngSubmit)="onUpdateStatus()">
+    <select formControlName="status">
+      <option value="OPEN">Open</option>
+      <option value="IN-PROGRESS">In-Progress</option>
+      <option value="DONE">Done</option>
+    </select>
+    <p>
+      <button>Update Status</button>
+    </p>
+  </form>
+</article>
