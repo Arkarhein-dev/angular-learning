@@ -1,0 +1,14 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "title": "Learn Angular Signals",
+      "completed": true
+    },
+    {
+      "id": "2",
+      "title": "Build a scalable folder structure",
+      "completed": false
+    }
+  ]
+}
