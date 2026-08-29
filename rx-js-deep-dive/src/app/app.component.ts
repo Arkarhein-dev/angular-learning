@@ -9,21 +9,14 @@ import {interval, map} from "rxjs";
 export class AppComponent implements OnInit{
   private destroyRef = inject(DestroyRef)
 
-    ngOnInit(): void {
-       // const subscription = interval(1000).pipe(
-       //   map(value => value*2)
-       // ).subscribe({
-       //    next: (value)=>{
-       //      console.log("Value : ",value);
-       //    },
-       //   complete: () =>{
-       //      console.log("Value : complete");
-       //   }
-       //  });
-       //
-       //  this.destroyRef.onDestroy(() =>{
-       //    subscription.unsubscribe();
-       //  });
-    }
+  ngOnInit() {
+    // const subscription = interval(1000).subscribe(
+    //   {
+    //     next: value =>{
+    //       console.log(value);
+    //     }
+    //   }
+    // );
+  }
 
 }
